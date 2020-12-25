@@ -1,0 +1,29 @@
+<html>
+    <head>
+       <?php include($this->getViewFile('/Boilerplates/head.phtml')); ?>
+       <?php foreach($this->styleFiles as $styleFile): ?>   
+          <link rel="stylesheet" href="/Public/styles/<?php echo $styleFile; ?>">
+       <?php endforeach; ?>
+    </head>
+    <body>
+       <section class="area main-area">
+           <header>
+               <?php include($this->getViewFile('/Boilerplates/header.phtml')); ?>
+           </header>
+           <div class="content-footer-wrapper">
+               <main>
+                    <?php include($this->getViewFile('/Templates/' . $this->templateName)) ?>
+               </main>
+               <footer>
+                   <?php include($this->getViewFile('/Boilerplates/footer.phtml')); ?>
+               </footer>        
+           </div>
+       </section>
+       <section class="area image-area">
+           <img src="/Public/images/image_summer.jpg" alt="Summer" /> 
+       </section>
+       <?php foreach($this->scriptFiles as $scriptFile): ?>   
+          <script src="/Public/script/<?php echo $scriptFile; ?>"></script>
+       <?php endforeach; ?>
+    </body>
+</html>

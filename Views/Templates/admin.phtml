@@ -1,0 +1,47 @@
+<?php
+/**
+ * @param $this AdminView
+ * @param $subscribers Array
+ */
+ $subscribers = $this->getData('subscribers');
+ $emailDomains = $this->getData('emailDomains');
+?>
+
+<div class="sortSearchBox">
+  <form action="">
+    <div class="selectDomain">
+      <select name="selectDomain" id="subscribers-filter">
+        <option value="">Filter By Domain</option>
+        <?php foreach($emailDomains as $emailDomain) : ?>
+          <option value="<?php echo $emailDomain; ?>"><?php echo substr(strtoupper($emailDomain), 0, strpos($emailDomain, '.')); ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+  </form>
+</div>
+<table class="admin-table-wrapper">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th><a class="<?php if($this->getData('sortField') === 'email') echo 'sorted ' . $this->getData('sortDirection'); ?>" 
+        href="/admin?sortby=email&dir=<?php echo $this->getSortingDirection('email'); ?>">email</a></th>
+      <th><a class="<?php if($this->getData('sortField') === 'date') echo 'sorted ' . $this->getData('sortDirection'); ?>" 
+        href="/admin?sortby=date&dir=<?php echo $this->getSortingDirection('date'); ?>">date</a></th>
+      <th>Delete email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($subscribers as $subscriber) : ?>
+      <tr>
+        <td><?php echo $subscriber->getId(); ?></td>
+        <td><?php echo $subscriber->getEmail(); ?></td>
+        <td><?php echo $subscriber->getDate(); ?></td>
+        <td>
+          <a href="/deletesubscriber?id=<?php echo $subscriber->getId(); ?>">
+            <button class="btn-delete" name='delete'>DELETE</button>
+          </a>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>

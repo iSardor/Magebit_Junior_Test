@@ -1,0 +1,26 @@
+.subscriber-area{
+	margin-left: 40px;
+}
+
+.subscriber-area h1{
+	margin: 20px 0;
+}
+
+.subscriber-area p{
+	width: 97%;
+  line-height: 28px;
+}
+
+.union {
+	margin-top: 1.7em;
+}
+
+@media only screen and (max-width: 480px) {
+		.subscriber-area{
+			margin-left: 20;
+		}
+		
+		.subscriber-area p {
+    	font-size: 0.8em;
+		}
+}

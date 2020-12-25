@@ -1,0 +1,301 @@
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
+/* Ultra large devices (large laptops and desktops, 1480px and up) */
+/* @media only screen and (min-width: 1480px) {...} */
+
+
+/* vars */
+:root {
+  --main-content-spacing: 75px;
+  --black: #131821;
+  --blue: #4066a5;
+  --iron: #e3e3e4;
+  --raven: #6a707b;
+  --white: #ffffff;
+}
+
+@media only screen and (max-width: 1480px) {
+  :root {
+    --main-content-spacing: 60px;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  :root {
+    --main-content-spacing: 0;
+  }
+  
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Layout */
+.main-area {
+  width: 35%;
+  padding: var(--main-content-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 1480px) {
+  .main-area {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-area {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-area {
+    width: 100%;
+    background-image: url('/Public/images/image_summer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+  }
+}
+
+.image-area {
+  width: 65%;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 1480px) {
+  .image-area {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-area {
+    width: 50%;
+  }
+}
+
+/* Bye Bye Left Half Screen, I didnt like you anyways */
+@media only screen and (max-width: 992px) {
+  .image-area {
+    display: none;
+  }
+}
+
+.image-area img {
+  width: 65%;
+  object-fit: cover;
+  object-position: center;
+  position: fixed;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-area img {
+    width: 50%;
+  }
+}
+
+body {
+  background: linear-gradient(var(--white), #F2F5FA);
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+@media only screen and (max-width: 992px) {
+  header {
+    background: white;
+    padding: 15px 5%;
+    margin-bottom: 15vh;
+  }
+}
+
+@media only screen and (max-width: 480px){
+	header {
+		padding: 4px 5%;
+	}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  header nav .nav-logo .logo-text img{
+    display: none;
+  }   
+}
+
+.content-footer-wrapper{
+	margin-top: var(--main-content-spacing);
+}
+
+@media only screen and (max-width: 992px) {
+    .content-footer-wrapper {
+        background: white;
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-footer-wrapper {
+    width: 90%;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+nav .nav-logo > img {
+  margin-right: 15px;
+  padding-bottom: 10px;
+}
+
+nav .nav-logo .logo-text {
+  align-self: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  padding-left: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--raven);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Footer Styles */
+footer {
+  margin-bottom: 5vh;
+}
+
+.line {
+  width: 65%;
+  height: 2px;
+  background-color: var(--iron);
+  margin: 50px auto;
+}
+@media only screen and (max-width: 480px){
+	.line{
+		margin: 20px auto;	
+	}
+}
+.social {
+  text-align: center;
+}
+
+.social .item {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--iron);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10;
+}
+
+@media only screen and (max-width: 480px){
+	.social .item{
+		 margin: 0px 4px;
+	}
+}
+
+.social .item:hover {
+  opacity: 1;
+  fill: var(--white);
+  border: none;
+}
+
+.line2 {
+  width: 400px;
+  height: 1px;
+  background-color: var(--iron);
+}
+
+.social2 {
+  width: 244px;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social .item:first-of-type:hover {
+  background: #4267b2;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.social .item:nth-of-type(2):hover {
+  background: #c13584;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.social .item:nth-of-type(3):hover {
+  background: #1da1f2;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.social .item:last-of-type:hover {
+  background: #ff0000;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.social .item:last-of-type:hover svg {
+  opacity: 1;
+  fill: var(--white);
+}
+
+.social .item:first-of-type:active {
+  background: #2f4a80;
+}
+.social .item:nth-of-type(2):active {
+  background: #8f2762;
+}
+.social .item:nth-of-type(3):active {
+  background: #177fbf;
+}
+.social .item:last-of-type:active {
+  background: #cc0000;
+}

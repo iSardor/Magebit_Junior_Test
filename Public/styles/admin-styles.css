@@ -1,0 +1,23 @@
+.admin-table-wrapper {
+  padding-left: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form .sorting{
+  margin: 0 5px;
+}
+
+.admin-table-wrapper table{
+	border-collapse: collapse;
+}
+
+.admin-table-wrapper td, th{
+  border: 1px solid #999;
+  padding: 0.5em;
+  text-align: center;
+}
+
