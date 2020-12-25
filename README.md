@@ -1,1 +1,10 @@
-TEst
+I changed apache virtual host to my project on my local host
+/*
+ *  DocumentRoot "C:/xampp/htdocs/Junior_Subscription_Task"
+ *  ServerName subscribing.com
+ *  ServerAlias www.subscribing.com
+ */
+ 
+ 
+ www.subscribing.com/ -> main page
+ www.subscribing.com/admin -> admin page
