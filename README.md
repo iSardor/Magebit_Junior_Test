@@ -1,4 +1,4 @@
-I changed apache virtual host to my project on my local host
+I changed apache virtual host to my project
 /*
  *  DocumentRoot "C:/xampp/htdocs/Junior_Subscription_Task"
  *  ServerName subscribing.com
